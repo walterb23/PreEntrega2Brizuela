@@ -64,7 +64,15 @@ padding: 0rem;
     font-weight: 900;                                            
                                                 
 }
+.bold {
+   
+    font-family: "Fluffy Cake", sans-serif;
                                                 
+     font-size: 70%;
+    
+                                  
+}
+                                             
 /*Tamaño de Fuente*/
 
 .letrachica {
@@ -87,12 +95,6 @@ padding: 0rem;
 
   font-size: 4rem;
     
-}
-@media (max-width:480px) {
-
-    .letrabanner{
-        font-size: 2rem;
-    }
 }
 
 /*Alineacion de texto*/
@@ -134,7 +136,7 @@ margin-left: 2rem;
     background-color: cadetblue;
 
 }
-/*Tamaño de imagenes*/
+/*Tamaño de imagenes, Iconos de Index*/
 .imgchica {
   
     height: auto;
@@ -149,6 +151,13 @@ margin-left: 2rem;
     max-height: 35%;
     max-width: 35%;
 }
+.imggrande {
+    
+    height: auto;
+    width: auto;
+    max-height: 60%;
+    max-width: 60%;
+}
 .imgicon {
     position:absolute;
     top: 70%;
@@ -161,14 +170,13 @@ margin-left: 2rem;
     right: 12%;
 
 }.imgicon3 {
-    
- 
     position: fixed;
     top: 160px;
     right:60px;
     z-index: 1;
 
 }
+/*Tamaño de imagenes, Iconos de Index*/
 .cajanav {
     background-color: rgb(6, 96, 221);
      height: 3rem;
@@ -183,16 +191,10 @@ margin-left: 2rem;
      width: 75rem; 
      position: relative;
  }
- .cajabannerbajo {
-    
-    background-color: rgb(0, 0, 0);
-     height: 10rem;
-     width: 100%; 
-     position: relative;
- }
+ 
  .cajabannertitulo {
-    
-
+    background-color: black;
+    opacity: .9;
      height: 10rem;
      width: 100%; 
      position: relative;
@@ -200,20 +202,34 @@ margin-left: 2rem;
  
  }
  .cajaform {
-    margin-left: 2%;
-   
-    background-color: rgb(63, 180, 226);
-     height: 42rem;
+    
+   opacity:1 ;
+ 
+     height: auto;
      width: 20rem; 
      position: relative;
  }  
+/*-------------Textos de formulario--------------
+*/
  .texform{
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+        color:springgreen;
+        
+      
+        }
+.texform2{
+    background-color: black;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-        color:rgb(0, 0, 0);
+        color:springgreen;
         
       
         }
@@ -286,7 +302,7 @@ align-content: center;
 
     flex-direction: column;
 
-    height: 700px;
+    height: px;
     justify-content: flex-end;
     }
     
@@ -321,15 +337,7 @@ align-content: center;
     background-image: url(../images/novedad1.avif);
     background-size: cover;
 }
-.caja5 {
-   
-    height: 45rem;
-    width: 45rem; 
-    position: relative;
-    background-image: url(https://st3.depositphotos.com/5392356/31922/i/450/depositphotos_319227268-stock-photo-diversity-group-people-training-gym.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+
 .caja6 {
    font-size: 1.5rem;
     height: 15rem;
@@ -447,6 +455,8 @@ ul li {
     flex-direction: column ;
 
     align-content: center;
+    text-align: right;
+
  }
  .cuadradoiguales {
     height: 45%;
@@ -456,12 +466,14 @@ ul li {
  .cuadrado {
 
 width: 99%;
-
+opacity: .9;
 background-color: rgb(59, 58, 58); ;
 }
 .flex3 {
-padding: 0.5%;
-    background-color: rgb(59, 58, 58);
+
+width: 100%;
+ background-color: black;
+    opacity: .9;
     display: flex;
     flex-direction: row ;
     justify-content: space-around;
@@ -469,16 +481,6 @@ padding: 0.5%;
     
  }
  
- @media (max-width:480px) {
-
-    .flex3{
-        background-color: rgb(59, 58, 58);
-        display: flex;
-        flex-direction: column ;
-        justify-content: space-around;
-       align-items: center;
-    }
-}
  /*-------------Footer-grid--------------
 */
 .imgauto{
@@ -699,8 +701,8 @@ text-align: center;
  
  
  .video{
-    height: 75%;
-width: 90%;
+    height: 315px;
+    width: 560px%;
 
  }
  .grid-item-home-9{
@@ -721,3 +723,73 @@ width: 90%;
     grid-row: 4/5;
     text-align: center;
  }
+ /*---------Responsive--------*/
+ @media (max-width:800px) {
+
+    .letrabanner{
+        font-size: 3rem;
+    }
+}
+
+ @media (max-width:768px) {
+
+    .flex3{
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column ;
+        justify-content: space-around;
+       align-items: center;
+    }
+}
+@media (max-width:426px) {
+
+.flex{
+   display: block;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content:space-evenly;
+   align-content: center;
+   text-align: center;
+      }
+}
+
+ @media (min-width: 768px) {
+ .texform{
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+        color:springgreen;
+        
+      
+        }
+    }
+ @media (max-width: 320px) {
+.cajaform {
+    opacity:1 ;
+    height: auto;
+    width: auto; 
+    position: relative;
+      }  
+    }
+@media (max-width:768px) {
+    
+}
+@media (max-width:570px) {
+.video{
+    height: 85%;
+    width:100%;    
+}
+} 
+@media (max-width:695px) {
+
+.grid-container-home{
+    width: 100%;
+    background-color: black;
+    opacity: .9;
+    display:block;
+    grid-template-rows: 16% 16% 16%  52%;
+      }
+    }
