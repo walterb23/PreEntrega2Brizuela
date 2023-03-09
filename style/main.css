@@ -37,6 +37,7 @@ padding: 0rem;
 
 
 .Courier1 /*Std Medium*/ {
+   
     font-family: "courier-std", monospace;
   
    
@@ -793,3 +794,36 @@ text-align: center;
     grid-template-rows: 16% 16% 16%  52%;
       }
     }
+
+     /*---------Seudo clases y elementos--------*/
+a {
+    padding: 10px;
+}
+a:hover {
+     color: red;
+     background-color: rgba(0, 0, 0, 0.689);
+     opacity: .7;
+    }
+::selection {
+
+    color: red;
+    background-color: rgb(0, 0, 0);
+    opacity: .2;
+}
+/*--------------Boostrap-Nuestros productos, modificaciones------------*/
+.carousel-img {
+
+opacity: .9;
+width: 300px;
+margin-left: 35%;
+
+}
+.carousel-img-backgraown {
+    background-color: black;
+    opacity: .9;
+    
+     width: 100%; 
+     position: relative;
+     background-size: cover;
+ 
+ }
