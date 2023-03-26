@@ -5442,7 +5442,7 @@ a.close.disabled {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5%;
+  width: 15%;
   color: #fff;
   text-align: center;
   opacity: 0.5;
@@ -9012,8 +9012,10 @@ footer {
 }
 
 .footer-07 {
-  background: black;
-  opacity: 0.9;
+  background: #121212;
+}
+.footer-07 a {
+  color: #a3de83;
 }
 .footer-07 p {
   color: rgba(255, 255, 255, 0.3);

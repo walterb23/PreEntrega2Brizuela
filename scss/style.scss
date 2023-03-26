@@ -93,9 +93,11 @@ footer{
 
 //FOOTER 07
 .footer-07{
-	background: #121212;
+	
+	background: black;
+	opacity: .9;
 	a{
-		color: $primary;
+	  
 	}
 	p{
 		color: rgba(255,255,255,.3);

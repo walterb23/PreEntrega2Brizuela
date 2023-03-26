@@ -1,7 +1,41 @@
-$negro: rgb(0, 0, 0);
 
-$verdeneon: rgb(10, 247, 89);
+/*------Convinacion de colores toda la pagina-----------------------------------*/
 
+/*---Texto Banner y texto de paginas---*/
+$color-primario: rgba(1, 250, 55, 0.863);
+/*---Texto navbar---*/
+$color-secundario: rgb(0, 0, 0);
+/*---Color de fondo Animado---*/
+$color-tercero: rgba(1, 250, 55, 0.863) ;
+/*---Color gradiente Footer---*/
+$color-cuarto: #0c2ff3 ;
+/*---Color apacidad de pagina---*/
+$color-quinto: black ;
+
+/*------Mixin Banner-----------------------------------*/
+@mixin bannerMixin(){
+    color:$color-primario ;
+    font-family: 'Effendi', sans-serif;
+    font-weight:70%;               
+    text-align: right !important;        
+}
+.banner-mixin{
+    @include bannerMixin();
+
+}
+/*------Mixin Nav-----------------------------------*/
+@mixin navbarMixin(){
+     /*Courier1 Std Medium*/
+    font-family: "courier-std", monospace;
+    font-style: normal; 
+    font-size:160%;
+    color: $color-secundario;
+    text-decoration: none;
+}
+.navbar-mixin{
+    @include navbarMixin();
+
+}
 
 
 *{
@@ -15,39 +49,25 @@ $verdeneon: rgb(10, 247, 89);
     
     
     /* Colores*/
+        
     
-    .colorrojo {
-        color: red;
-        
-    }
-    .coloragua{
-        color: aqua;
-        
-    }
-    .colorverdeneon{
-        color:$verdeneon !important;
+    .color-1{
+        color:$color-primario !important;
     
-    }
-    .colorfucsia{
-        color:fuchsia;
-        
-    }
-    .colornegro{
-        color: $negro;
+    } 
+   
+    .color-2{
+        color: $color-secundario;
         
     }
     
-    
-    
-    /*Fuente COURIER-----------------------------*/
+     /*Fuente COURIER-----------------------------*/
     
     
     .Courier1 /*Std Medium*/ {
        
-        font-family: "courier-std", monospace;
-      
-       
-        font-style: normal;
+     font-family: "courier-std", monospace;
+       font-style: normal;
     }
     .Courier2 /*Std Medium Oblique*/ {
         font-family: "courier-std", monospace;
@@ -65,16 +85,8 @@ $verdeneon: rgb(10, 247, 89);
         font-style: italic;
     }
     
-    /*Fuente EFFENDI*/
-    
-    .effendi  {
-    
-        font-family: 'Effendi', sans-serif;
-        font-weight:70%;                                            
-                                                    
-    }          
-                                                    
-    
+                                             
+
     /*Fuente Bold */
     
     .bold {
@@ -104,11 +116,27 @@ $verdeneon: rgb(10, 247, 89);
     
         font-size:2rem;
     }
-    .letrabanner {
+    .footer-titulo {
     
-      font-size: 4rem;
-        
+        font-size:5rem;
     }
+ /*------Animacion de Titulo de Banner-----------------------------------*/   
+    h1 {
+    
+      font-size: 8rem;
+      position: relative;
+      animation-name: banner-animacion;
+      animation-duration: 14s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes banner-animacion {
+        0%   {color: $color-primario; right:0px; top:0px;}
+        25%  {color: $color-secundario; right:56%; top:0px;}
+        50%  {font-size: 9rem;color:blue; right:0px; top:0px;}
+        75%  {color:rgb(222, 5, 230); right:41%; top:00px;}
+        100% {color: $color-primario; right:00px; top:0px;}
+      }
     
     /*Alineacion de texto flexbox-------------------------*/
     
@@ -170,23 +198,7 @@ $verdeneon: rgb(10, 247, 89);
         width: auto;
         max-height: 60%;
         max-width: 60%;
-    }
-    .imgicon {
-        position:absolute;
-        top: 70%;
-        right: 19%;
-    
-    }
-    .imgicon2 {
-        position:absolute;
-        top: 70%;
-        right: 12%;
-    
-    }.imgicon3 {
-        position: fixed;
-        top: 160px;
-        right:60px;
-        z-index: 1;
+ 
     
     }
     /*Tamaño de imagenes, Iconos de Index*/
@@ -208,10 +220,11 @@ $verdeneon: rgb(10, 247, 89);
      .cajabannertitulo {
         background-color: black;
         opacity: .9;
-         height: 10rem;
-         width: 100%; 
-         position: relative;
-         background-size: cover;
+        height: 10rem;
+        width: 100%; 
+        text-align: right;
+        position: relative;
+        background-size: cover;
      
      }
      .cajaform {
@@ -230,19 +243,19 @@ $verdeneon: rgb(10, 247, 89);
         margin-right: 2rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
-            color:springgreen;
+        font-size: 2rem;
+            color:$color-primario;
             
           
             }
     .texform2{
         
-        margin-left: 2rem;
+        margin-left: 5rem;
         margin-right: 2rem;
         margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-            color: $negro;
+        margin-bottom: 0rem;
+        font-size: 1.5rem;
+            color: black;
             
           
             }
@@ -572,7 +585,7 @@ $verdeneon: rgb(10, 247, 89);
       
       .bg {
         animation:slide 5s ease-in-out infinite alternate;
-        background-image: linear-gradient(-60deg, rgb(4, 248, 85) 50%, rgb(7, 26, 39) 50%);
+        background-image: linear-gradient(-60deg, $color-tercero 50%, rgb(7, 26, 39) 50%);
         bottom:0;
         left:-50%;
         opacity:.5;
@@ -737,12 +750,14 @@ $verdeneon: rgb(10, 247, 89);
          color: red;
          background-color: rgba(0, 0, 0, 0.689);
          opacity: .7;
+         
         }
     ::selection {
     
-        color: red;
+        color: rgb(140, 0, 255);
         background-color: rgb(0, 0, 0);
         opacity: .2;
+        
     }
     /*--------------Boostrap-Nuestros productos, modificaciones------------*/
     .carousel-img {
@@ -754,21 +769,31 @@ $verdeneon: rgb(10, 247, 89);
     
     }
     .carousel-img-backgraown {
-        background-color: black;
-        opacity: .9;
+       
          width: 100%; 
          position: relative;
          background-size: cover;
      
      }
      .carousel-font {
-        color: rgb(26, 255, 0);
+        color: $color-primario;
         font-family: "Fluffy Cake", sans-serif;
         font-size: 2rem;
        
     
      }
-    
+ /*--------------Gradiente footer------------*/
+.footer-container {
+
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: linear-gradient(180deg,transparent, $color-cuarto, transparent);
+}
+
+
     
     
 
@@ -789,13 +814,49 @@ $verdeneon: rgb(10, 247, 89);
             outline: none !important;
         }
     }
-    h1, h2, h3, h4, h5,
+ h2, h3, h4, h5,
     .h1, .h2, .h3, .h4, .h5 {
         line-height: 1.5;
         font-weight: 400;
         font-family: $font-primary;
     }
+     /*------Animacion de Titulo de Banner-----------------------------------*/   
+ h1 {
+    position: relative;
+    animation-name: banner-animacion;
+    animation-duration: 14s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
     
+  }
+  @keyframes banner-animacion {
+      0%   {color: $color-primario; right:0px; top:0px;}
+      25%  {color: $color-secundario; right:50%; top:0px;}
+      50%  {color:blue; right:0px; top:0px;}
+      75%  {color:rgb(222, 5, 230); right:30%; top:00px;}
+      100% {color: $color-primario; right:00px; top:0px;}
+    }
+    /*------Opacidad y sacar Paddin y margin al maquetado-----------------------------------*/ 
+ 
+ .sin-padymargin {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+   
+ }
+ .opacidad{
+background-color: $color-quinto;
+opacity: .9;
+ }
+ .opacidad-none{
+    background-color:black;
+    opacity: .09;
+    
+     }
+ 
     /*---------Responsive--------*/
      @media (max-width:800px) {
     
@@ -828,14 +889,14 @@ $verdeneon: rgb(10, 247, 89);
     
      @media (min-width: 768px) {
      .texform{
-        text-align: left;
+        text-align: center;
        
         margin-left: 1rem;
         margin-right: 2rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        font-size: 1rem;
-            color:springgreen;
+        font-size: 2rem;
+            color:$color-primario;
             
           
             }
@@ -848,9 +909,7 @@ $verdeneon: rgb(10, 247, 89);
         position: relative;
           }  
         }
-    @media (max-width:768px) {
-        
-    }
+   
     @media (max-width:570px) {
     .video{
         height: 85%;
@@ -872,7 +931,10 @@ $verdeneon: rgb(10, 247, 89);
     
             opacity: .9;
             width: 300px;
-            margin-left: 35%;
+            margin-left: 40%;
+            margin-right: 40%;
+            margin-bottom: 10%;
+            
         }
     }
     @media (max-width:695px) {
@@ -881,9 +943,9 @@ $verdeneon: rgb(10, 247, 89);
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
     font-size: 1rem;
-        color: $verdeneon;
+        color: $color-primario;
 }
 
     }
@@ -904,3 +966,6 @@ $verdeneon: rgb(10, 247, 89);
             
             }
         }
+ 
+        
+   
