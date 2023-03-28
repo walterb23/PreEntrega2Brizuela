@@ -38,6 +38,10 @@
   color: rgb(0, 0, 0);
 }
 
+.color-4 {
+  color: #0c2ff3;
+}
+
 /*Fuente COURIER-----------------------------*/
 .Courier1 {
   font-family: "courier-std", monospace;
@@ -65,7 +69,7 @@
 /*Fuente Bold */
 .bold {
   font-family: "Fluffy Cake", sans-serif;
-  font-size: 70%;
+  font-size: 2rem;
 }
 
 /*Tamaño de Fuent-----------------------------------*/
@@ -135,6 +139,7 @@ h1 {
 
 .derecha {
   text-align: right;
+  margin: 0.5rem;
 }
 
 .izquierda {
@@ -209,6 +214,7 @@ h1 {
 }
 
 .cajaform {
+  margin: 5px;
   opacity: 1;
   height: auto;
   width: 20rem;
@@ -469,12 +475,18 @@ ul li {
 
 .cuadradoiguales {
   height: 45%;
-  width: 45%;
+  width: 80%;
 }
 
 /*---------Novedades/Imagenes--------*/
 .cuadrado {
   width: 99%;
+  opacity: 0.9;
+  background-color: rgb(59, 58, 58);
+}
+
+.cuadrado2 {
+  width: 80%;
   opacity: 0.9;
   background-color: rgb(59, 58, 58);
 }
@@ -804,6 +816,46 @@ h1 {
     top: 0px;
   }
 }
+/*------Animacion de Boton formulario "Enviar"-----------------------------------*/
+.boton-animacion {
+  transition-property: width;
+  transition-duration: 5s;
+  transition-timing-function: linear;
+  transition-delay: 2s;
+  background-color: #0c2ff3;
+  font-size: 1.75rem;
+  border: 4px solid rgb(0, 0, 0);
+  border-radius: 18px;
+  position: relative;
+  animation-name: boton-animacion;
+  animation-duration: 7s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+.boton-animacion:hover {
+  width: 330px;
+}
+
+@keyframes boton-animacion {
+  0% {
+    color: rgba(1, 250, 55, 0.863);
+  }
+  25% {
+    color: rgb(242, 6, 250);
+  }
+  50% {
+    color: blue;
+    right: 0px;
+  }
+  75% {
+    color: rgb(242, 6, 250);
+  }
+  100% {
+    color: rgba(1, 250, 55, 0.863);
+  }
+}
 /*------Opacidad y sacar Paddin y margin al maquetado-----------------------------------*/
 .sin-padymargin {
   width: 100%;
@@ -882,11 +934,20 @@ h1 {
     grid-template-rows: 16% 16% 16% 52%;
   }
 }
-@media (min-width: 425px) {
+@media (min-width: 426px) {
   .carousel-img {
     opacity: 0.9;
     width: 300px;
     margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 10%;
+  }
+}
+@media (max-width: 425px) {
+  .carousel-img {
+    opacity: 0.9;
+    width: 300px;
+    margin-left: 11%;
     margin-right: 40%;
     margin-bottom: 10%;
   }
@@ -911,6 +972,44 @@ h1 {
   .index-video {
     width: auto;
     height: auto;
+  }
+}
+/*------Animacion de Titulo de Banner-----------------------------------*/
+@media (max-width: 426px) {
+  h1 {
+    font-size: 6rem;
+    position: relative;
+    animation-name: banner-animacion;
+    animation-duration: 14s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes banner-animacion {
+    0% {
+      color: rgba(1, 250, 55, 0.863);
+      right: 0px;
+      top: 0px;
+    }
+    25% {
+      color: rgb(0, 0, 0);
+      right: 20%;
+      top: 0px;
+    }
+    50% {
+      color: blue;
+      right: 0px;
+      top: 0px;
+    }
+    75% {
+      color: rgb(222, 5, 230);
+      right: 20%;
+      top: 0px;
+    }
+    100% {
+      color: rgba(1, 250, 55, 0.863);
+      right: 0px;
+      top: 0px;
+    }
   }
 }
 
